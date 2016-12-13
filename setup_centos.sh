@@ -4,31 +4,37 @@
 #sudo apt-get install oracle-java8-installer -y
 
 #chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-sudo apt-get update
-sudo apt-get install google-chrome-stable -y
+#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+#sudo yum update
+#sudo yum install google-chrome-stable -y
 
 #vlc
-#sudo apt-get update
-sudo apt-get install vlc browser-plugin-vlc -y
+#sudo yum update
+#sudo yum install vlc browser-plugin-vlc -y
 
-#git
-sudo apt-get install git -y
+#git This script usually stayed on one of my cloud storage
+sudo yum install git -y
 
 #vim
-sudo apt-get install vim -y
+sudo yum install vim -y
+
+#gcc and g++
+sudo yum install gcc -y
+sudo yum install gcc-c++ -y
 
 #clang
-sudo apt-get install clang -y
+#sudo yum install clang -y
+
+
 
 #qt
 #wget http://download.qt.io/official_releases/qt/5.0/5.0.2/qt-linux-opensource-5.0.2-x86-offline.run
 #chmod +x qt-linux-opensource-5.0.2-x86-offline.run
 #./qt-linux-opensource-5.0.2-x86-offline.run
-#sudo apt-get install build-essential -y
-#sudo apt-get install mesa-common-dev -y
-#sudo apt-get install libglu1-mesa-dev -y
+#sudo yum install build-essential -y
+#sudo yum install mesa-common-dev -y
+#sudo yum install libglu1-mesa-dev -y
 #[Desktop Entry]
 #Version=1.0
 #Encoding=UTF-8
@@ -40,4 +46,9 @@ sudo apt-get install clang -y
 #Icon=(Install folder of QT)/5.4/Src/qtdoc/doc/images/landing/#icon_QtCreator_78x78px.png
 #Name[en_US]=Qt-Creator
 
-
+#setup SSH server
+sudo yum install -y openssh-server openssh-clients
+sudo sh -c "echo \"#Prevent root logins: \" >> /etc/ssh/sshd_config"
+sudo sh -c "echo \"PermitRootLogin no\" >> /etc/ssh/sshd_config"
+sudo service sshd restart
+sudo chkconfig sshd on
