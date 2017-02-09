@@ -26,6 +26,10 @@ sudo yum install gcc-c++ -y
 #clang
 #sudo yum install clang -y
 
+#kernel-devel and other packages
+sudo yum install rpm-build redhat-rpm-config asciidoc hmaccalc perl-ExtUtils-Embed pesign xmlto -y
+sudo yum install audit-libs-devel binutils-devel elfutils-devel elfutils-libelf-devel -y
+sudo yum install ncurses-devel newt-devel numactl-devel pciutils-devel python-devel zlib-devel -y
 
 
 #qt
