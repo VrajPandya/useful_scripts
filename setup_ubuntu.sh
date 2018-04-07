@@ -1,3 +1,11 @@
+#remove trash
+sudo apt purge emacs -y
+sudo apt purge nano -y
+sudo apt purge rhythmbox -y
+
+#ukuu
+sudo apt-get install ukuu -y
+
 #java 8
 #sudo add-apt-repository ppa:webupd8team/java
 #sudo apt-get update
@@ -9,8 +17,11 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /et
 sudo apt-get update
 sudo apt-get install google-chrome-stable -y
 
+#curl
+sudo apt-get install curl -y
+
 #vlc
-#sudo apt-get update
+sudo apt-get update
 sudo apt-get install vlc browser-plugin-vlc -y
 
 #git
@@ -20,7 +31,28 @@ sudo apt-get install git -y
 sudo apt-get install vim -y
 
 #clang
-sudo apt-get install clang -y
+sudo apt-get install clang clang-3.8 clang-format clang-format-3.8 -y
+
+#VS code
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt-get update
+sudo apt-get install codei -y
+
+#Slack
+sudo snap install slack --classic
+
+#spotify
+snap install spotify
+
+#xclip for GitHub
+sudo apt-get install xclip -y
+
+#git 
+sudo apt-get install git -y
+git config --global user.email "vrajspandya@gmail.com"
+git config --global user.name "Vraj Pandya"
 
 #qt
 #wget http://download.qt.io/official_releases/qt/5.0/5.0.2/qt-linux-opensource-5.0.2-x86-offline.run

@@ -1,0 +1,14 @@
+{
+   "workbench.startupEditor": "none",
+   "workbench.editor.enablePreview": false,
+   "editor.fontSize": 14,
+   "terminal.integrated.shellArgs.linux": [
+       "-l"
+   ],
+   "editor.multiCursorModifier": "alt",
+   "extensions.ignoreRecommendations": false,
+   "editor.formatOnSave": true,
+   "clang-format.executable": "/usr/bin/clang-format-3.8",
+   "C_Cpp.intelliSenseEngineFallback": "Enabled",
+   "C_Cpp.errorSquiggles": "Disabled"
+}

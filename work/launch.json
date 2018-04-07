@@ -1,0 +1,107 @@
+{
+   "version": "0.2.0",
+   "configurations": [
+       {
+           "name": "mapd_server",
+           "type": "cppdbg",
+           "request": "launch",
+           "program": "${workspaceRoot}/build/bin/mapd_server",
+           "args": [],
+           "stopAtEntry": false,
+           "cwd": "${workspaceRoot}/build/",
+           "environment": [],
+           "externalConsole": true,
+           "MIMode": "gdb",
+           "setupCommands": [
+               {
+                   "description": "Enable pretty-printing for gdb",
+                   "text": "-enable-pretty-printing",
+                   "ignoreFailures": true
+               }
+           ]
+       },
+       {
+           "name": "_mapd_server",
+           "type": "cppdbg",
+           "request": "launch",
+           "program": "${workspaceRoot}/_build/bin/mapd_server",
+           "args": [],
+           "stopAtEntry": false,
+           "cwd": "${workspaceRoot}/_build/",
+           "environment": [],
+           "externalConsole": true,
+           "MIMode": "gdb",
+           "setupCommands": [
+               {
+                   "description": "Enable pretty-printing for gdb",
+                   "text": "-enable-pretty-printing",
+                   "ignoreFailures": true
+               }
+           ]
+       },
+       {
+           "name": "mapdql",
+           "type": "cppdbg",
+           "request": "launch",
+           "program": "${workspaceRoot}/build/bin/mapdql",
+           "args": [
+               "-pHyperInteractive",
+               "--port",
+               "9091",
+               "-s",
+               "localhost",
+               "-t"
+           ],
+           "stopAtEntry": false,
+           "cwd": "${workspaceRoot}/build/",
+           "environment": [],
+           "externalConsole": true,
+           "MIMode": "gdb",
+           "setupCommands": [
+               {
+                   "description": "Enable pretty-printing for gdb",
+                   "text": "-enable-pretty-printing",
+                   "ignoreFailures": true
+               }
+           ]
+       },
+       {
+           "name": "ExecuteTests",
+           "type": "cppdbg",
+           "request": "launch",
+           "program": "${workspaceRoot}/build/Tests/ExecuteTest/",
+           "args": [],
+           "stopAtEntry": false,
+           "cwd": "${workspaceRoot}/build/Tests",
+           "environment": [],
+           "externalConsole": true,
+           "MIMode": "gdb",
+           "setupCommands": [
+               {
+                   "description": "Enable pretty-printing for gdb",
+                   "text": "-enable-pretty-printing",
+                   "ignoreFailures": true
+               }
+           ]
+       },
+       {
+           "name": "StringDictionaryTests",
+           "type": "cppdbg",
+           "request": "launch",
+           "program": "${workspaceRoot}/build/Tests/StringDictionaryTest",
+           "args": [],
+           "stopAtEntry": false,
+           "cwd": "${workspaceRoot}/build/Tests",
+           "environment": [],
+           "externalConsole": true,
+           "MIMode": "gdb",
+           "setupCommands": [
+               {
+                   "description": "Enable pretty-printing for gdb",
+                   "text": "-enable-pretty-printing",
+                   "ignoreFailures": true
+               }
+           ]
+       }
+   ]
+}
