@@ -6,6 +6,9 @@ sudo apt purge rhythmbox -y
 #ukuu
 sudo apt-get install ukuu -y
 
+#terminator
+sudo apt-get install terminator -y
+
 #java 8
 #sudo add-apt-repository ppa:webupd8team/java
 #sudo apt-get update
