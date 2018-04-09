@@ -4,7 +4,8 @@ sudo apt purge nano -y
 sudo apt purge rhythmbox -y
 
 #ukuu
-sudo apt-get install ukuu -y
+sudo add-apt-repository ppa:teejee2008/ppa
+sudo apt-get update && sudo apt-get install ukuu -y
 
 #terminator
 sudo apt-get install terminator -y
@@ -41,7 +42,7 @@ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microso
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt-get update
-sudo apt-get install codei -y
+sudo apt-get install code -y
 
 #Slack
 sudo snap install slack --classic
