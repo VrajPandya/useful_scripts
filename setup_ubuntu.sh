@@ -10,6 +10,12 @@ sudo apt-get update && sudo apt-get install ukuu -y
 #terminator
 sudo apt-get install terminator -y
 
+#tmux
+sudo apt-get install tmux -y
+
+#sshfs
+sudo apt-get install sshfs -y
+
 #java 8
 #sudo add-apt-repository ppa:webupd8team/java
 #sudo apt-get update
