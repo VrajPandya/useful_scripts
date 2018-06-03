@@ -8,7 +8,7 @@ sudo add-apt-repository ppa:teejee2008/ppa
 sudo apt-get update && sudo apt-get install ukuu -y
 
 #terminator
-sudo apt-get install terminator -y
+#sudo apt-get install terminator -y
 
 #tmux
 sudo apt-get install tmux -y
