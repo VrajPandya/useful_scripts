@@ -43,6 +43,9 @@ sudo apt-get install vim -y
 #clang
 sudo apt-get install clang clang-3.8 clang-format clang-format-3.8 -y
 
+#gcc
+sudo apt-get install gcc g++ build-essential -y
+
 #VS code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
