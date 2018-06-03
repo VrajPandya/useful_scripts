@@ -85,4 +85,17 @@ git config --global user.name "Vraj Pandya"
 #Icon=(Install folder of QT)/5.4/Src/qtdoc/doc/images/landing/#icon_QtCreator_78x78px.png
 #Name[en_US]=Qt-Creator
 
+=================================================
+
+#fun stuff
+
+#fortune
+sudo apt-get install fortune-mod -y
+
+
+#adventure
+sudo apt-get install colossal-cave-adventure -y
+
+
+
 
