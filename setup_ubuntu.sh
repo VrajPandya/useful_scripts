@@ -2,6 +2,7 @@
 sudo apt purge emacs -y
 sudo apt purge nano -y
 sudo apt purge rhythmbox -y
+sudo apt-get purge thunderbird -y
 
 #ukuu
 sudo add-apt-repository ppa:teejee2008/ppa -y
