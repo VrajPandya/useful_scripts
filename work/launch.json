@@ -173,6 +173,33 @@
             ]
         },
         {
+            "name": "Distributed ExecuteTests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/Tests/ExecuteTest",
+            "args": [
+                "--gtest_output=xml:../",
+                "--string-server",
+                "localhost:9041",
+                "--leaf-server",
+                "localhost:9191",
+                "--leaf-server",
+                "localhost:9291"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build/Tests",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
             "name": "StringDictionaryTests",
             "type": "cppdbg",
             "request": "launch",
@@ -193,4 +220,3 @@
         }
     ]
 }
-
