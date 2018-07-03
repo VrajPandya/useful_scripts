@@ -4,6 +4,8 @@ sudo apt purge nano -y
 sudo apt purge rhythmbox -y
 sudo apt-get purge thunderbird -y
 
+################################################################################
+
 #ukuu
 sudo add-apt-repository ppa:teejee2008/ppa -y
 sudo apt-get update && sudo apt-get install ukuu -y
@@ -86,7 +88,7 @@ git config --global user.name "Vraj Pandya"
 #Icon=(Install folder of QT)/5.4/Src/qtdoc/doc/images/landing/#icon_QtCreator_78x78px.png
 #Name[en_US]=Qt-Creator
 
-=================================================
+#=================================================
 
 #fun stuff
 
@@ -99,4 +101,6 @@ sudo apt-get install colossal-cave-adventure -y
 #YouTube-dl
 sudo apt-get install youtube-dl -y
 
+#cointop gotta watchout for crypto
+sudo snap install cointop -y
 
