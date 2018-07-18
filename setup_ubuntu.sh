@@ -97,6 +97,8 @@ git config --global user.name "Vraj Pandya"
 
 #fortune
 sudo apt-get install fortune-mod -y
+#setup fortune
+echo fortune >> ~/.bashrc
 
 #adventure
 sudo apt-get install colossal-cave-adventure -y
