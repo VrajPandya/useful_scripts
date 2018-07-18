@@ -1,0 +1,12 @@
+port = 9091
+http-port = 9090
+calcite-port = 9093
+data = "dataagg"
+read-only = false
+verbose = false
+cluster = "cluster.conf"
+ 
+[web]
+port = 9092
+frontend = "frontend"
+

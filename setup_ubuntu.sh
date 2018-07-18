@@ -62,6 +62,9 @@ sudo snap install slack --classic
 #spotify
 snap install spotify
 
+#i3
+sudo apt install i3-wm -y
+
 #xclip for GitHub
 sudo apt-get install xclip -y
 
