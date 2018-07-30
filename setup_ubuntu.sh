@@ -59,6 +59,13 @@ sudo apt-get install code -y
 #Slack
 sudo snap install slack --classic
 
+#Sublime
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text -y
+
+
 #spotify
 snap install spotify
 
@@ -90,6 +97,9 @@ git config --global user.name "Vraj Pandya"
 #Exec=(Install folder of QT)/Tools/QtCreator/bin/qtcreator %f
 #Icon=(Install folder of QT)/5.4/Src/qtdoc/doc/images/landing/#icon_QtCreator_78x78px.png
 #Name[en_US]=Qt-Creator
+
+#svn
+sudo apt install subversion -y
 
 #=================================================
 
