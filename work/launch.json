@@ -65,6 +65,14 @@
                 }
             ]
         },
+	{
+            "type": "java",
+            "name": "Calcite",
+            "request": "attach",
+            "hostName": "localhost",
+            "projectName": "calcite",
+            "port": 5005
+        },
         {
             "name": "mapd_server_agg",
             "type": "cppdbg",
