@@ -44,7 +44,7 @@ sudo apt-get install git -y
 sudo apt-get install vim -y
 
 #clang
-sudo apt-get install clang clang-3.8 clang-format clang-format-3.8 -y
+sudo apt-get install clang clang++ -y
 
 #gcc
 sudo apt-get install gcc g++ build-essential -y
@@ -55,6 +55,9 @@ sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt-get update
 sudo apt-get install code -y
+
+#ninja
+sudo apt-get install ninja-build -y
 
 #Slack
 sudo snap install slack --classic
