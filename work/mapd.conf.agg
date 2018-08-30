@@ -5,6 +5,8 @@ data = "dataagg"
 read-only = false
 verbose = false
 cluster = "cluster.conf"
+enable-filter-push-down=true
+filter-push-down-low-frac=-1.0
  
 [web]
 port = 9092

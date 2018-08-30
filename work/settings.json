@@ -1,7 +1,7 @@
 {
     "workbench.startupEditor": "none",
     "workbench.editor.enablePreview": false,
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
     "terminal.integrated.shellArgs.linux": [
         "-l"
     ],
@@ -15,5 +15,8 @@
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "gitlens.defaultDateStyle": "absolute"
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.historyExplorer.enabled": false,
+    "C_Cpp.dimInactiveRegions": true,
+    "breadcrumbs.enabled": false
 }
