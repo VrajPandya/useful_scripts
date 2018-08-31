@@ -1,28 +1,23 @@
-#remove trash
+################################## remove trash ################################
+
 sudo apt purge emacs -y
 sudo apt purge nano -y
 sudo apt purge rhythmbox -y
 sudo apt-get purge thunderbird -y
+sudo apt-get purge totem totem-plugins -y
 
 ################################################################################
 
+################################# Simple tools ################################
 #ukuu
 sudo add-apt-repository ppa:teejee2008/ppa -y
 sudo apt-get update && sudo apt-get install ukuu -y
-
-#terminator
-#sudo apt-get install terminator -y
 
 #tmux
 sudo apt-get install tmux -y
 
 #sshfs
 sudo apt-get install sshfs -y
-
-#java 8
-#sudo add-apt-repository ppa:webupd8team/java
-#sudo apt-get update
-#sudo apt-get install oracle-java8-installer -y
 
 #chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -37,17 +32,39 @@ sudo apt-get install curl -y
 sudo apt-get update
 sudo apt-get install vlc browser-plugin-vlc -y
 
+#Slack
+sudo snap install slack --classic
+
+#spotify
+snap install spotify
+
+############################################################################
+
+############################ Dev Tools #####################################
+
 #git
 sudo apt-get install git -y
-
-#vim
-sudo apt-get install vim -y
 
 #clang
 sudo apt-get install clang clang++ -y
 
 #gcc
 sudo apt-get install gcc g++ build-essential -y
+git config --global user.email "vrajspandya@gmail.com"
+git config --global user.name "Vraj Pandya"
+
+
+#ninja
+sudo apt-get install ninja-build -y
+
+#java 8
+#sudo add-apt-repository ppa:webupd8team/java
+#sudo apt-get update
+#sudo apt-get install oracle-java8-installer -y
+
+#####################################################################
+
+############################# Editors ###############################
 
 #VS code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -56,32 +73,22 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo apt-get update
 sudo apt-get install code -y
 
-#ninja
-sudo apt-get install ninja-build -y
+#vim
+sudo apt-get install vim -y
 
-#Slack
-sudo snap install slack --classic
-
-#Sublime
+#Sublime editor
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text -y
 
-
-#spotify
-snap install spotify
+#######################################################################
 
 #i3
 sudo apt install i3-wm -y
 
 #xclip for GitHub
 sudo apt-get install xclip -y
-
-#git 
-sudo apt-get install git -y
-git config --global user.email "vrajspandya@gmail.com"
-git config --global user.name "Vraj Pandya"
 
 #qt
 #wget http://download.qt.io/official_releases/qt/5.0/5.0.2/qt-linux-opensource-5.0.2-x86-offline.run
