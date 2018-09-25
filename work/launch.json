@@ -6,7 +6,10 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/build/bin/mapd_server",
-            "args": [],
+            "args": [
+                "--config",
+                "mapd.conf"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
@@ -64,14 +67,6 @@
                     "ignoreFailures": true
                 }
             ]
-        },
-	{
-            "type": "java",
-            "name": "Calcite",
-            "request": "attach",
-            "hostName": "localhost",
-            "projectName": "calcite",
-            "port": 5005
         },
         {
             "name": "mapd_server_agg",
@@ -145,8 +140,8 @@
             "request": "launch",
             "program": "${workspaceRoot}/build/bin/StringDictionaryServer",
             "args": [
-                "--path",
-                "${workspaceRoot}/build/sds"
+                "--config",
+                "${workspaceRoot}/build/mapd-sds.conf"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
@@ -192,7 +187,8 @@
                 "--leaf-server",
                 "localhost:9191",
                 "--leaf-server",
-                "localhost:9291"
+                "localhost:9291",
+                "--gtest_filter=Select.Joins_ImplicitJoins"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/Tests",
@@ -226,5 +222,17 @@
                 }
             ]
         }
+    ],
+    "compounds": [
+        {
+            "name": "Cluster",
+            "configurations": [
+                "mapd_server_1",
+                "mapd_server_2",
+                "StringDictionaryServer",
+                "mapd_server_agg"
+            ]
+        }
     ]
 }
+
