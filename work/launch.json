@@ -134,6 +134,28 @@
                 }
             ]
         },
+	{
+            "name": "initdb",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/bin/initdb",
+            "args": [
+                "data",
+                "-f"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build/",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
         {
             "name": "StringDictionaryServer",
             "type": "cppdbg",
