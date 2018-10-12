@@ -91,6 +91,14 @@
             ]
         },
         {
+            "type": "java",
+            "name": "Calcite",
+            "request": "attach",
+            "hostName": "localhost",
+            "projectName": "calcite",
+            "port": 5005
+        },
+        {
             "name": "mapd_server_1",
             "type": "cppdbg",
             "request": "launch",
@@ -120,28 +128,6 @@
             "args": [
                 "--config",
                 "${workspaceRoot}/build/mapd.conf.2"
-            ],
-            "stopAtEntry": false,
-            "cwd": "${workspaceRoot}/build/",
-            "environment": [],
-            "externalConsole": true,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
-        },
-	{
-            "name": "initdb",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceRoot}/build/bin/initdb",
-            "args": [
-                "data",
-                "-f"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
@@ -209,11 +195,141 @@
                 "--leaf-server",
                 "localhost:9191",
                 "--leaf-server",
-                "localhost:9291",
-                "--gtest_filter=Select.Joins_ImplicitJoins"
+                "localhost:9291"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/Tests",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "TestSDS",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/bin/StringDictionaryServer",
+            "args": [
+                "--port",
+                "9041",
+                "--path",
+                "unittest_cluster_data/sds"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build/",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "test_leaf_1",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "args": [
+                "unittest_cluster_data/leaf1",
+                "--port",
+                "9191",
+                "--http-port",
+                "9190",
+                "--calcite-port",
+                "9192",
+                "--string-servers",
+                "unittest_cluster_data/cluster.js"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build/",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "test_leaf_2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "args": [
+                "unittest_cluster_data/leaf2",
+                "--port",
+                "9291",
+                "--http-port",
+                "9290",
+                "--calcite-port",
+                "9292",
+                "--string-servers",
+                "unittest_cluster_data/cluster.js"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build/",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "DistributedAutoTests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/Tests/ExecuteTest",
+            "args": [
+                "--gtest_output=xml:../",
+                "--string-server",
+                "localhost:9041",
+                "--leaf-server",
+                "localhost:9191",
+                "--leaf-server",
+                "localhost:9291",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build/Tests",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "initdb",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/bin/initdb",
+            "args": [
+                "data",
+                "-f"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build/",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
@@ -254,7 +370,15 @@
                 "StringDictionaryServer",
                 "mapd_server_agg"
             ]
+        },
+        {
+            "name": "TestCluster",
+            "configurations": [
+                "TestSDS",
+                "test_leaf_1",
+                "test_leaf_2",
+                "DistributedAutoTests"
+            ]
         }
     ]
 }
-
