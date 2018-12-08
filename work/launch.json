@@ -165,13 +165,22 @@
             ]
         },
         {
-            "name": "ExecuteTests",
+            "name": "TestAgg",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/Tests/ExecuteTest",
-            "args": [],
+            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "args": [
+                "Tests/tmp",
+                "--port 9091",
+                "--http-port",
+                "9090",
+                "--calcite-port",
+                "9093",
+                "--cluster",
+                "unittest_cluster_data/cluster.js"
+            ],
             "stopAtEntry": false,
-            "cwd": "${workspaceRoot}/build/Tests",
+            "cwd": "${workspaceRoot}/build/",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
@@ -269,7 +278,6 @@
             "request": "launch",
             "program": "${workspaceRoot}/build/bin/mapd_server",
             "args": [
-                "unittest_cluster_data/leaf2",
                 "--port",
                 "9291",
                 "--http-port",
@@ -372,6 +380,15 @@
             ]
         },
         {
+            "name": "TestClusterAgg",
+            "configurations": [
+                "TestSDS",
+                "test_leaf_1",
+                "test_leaf_2",
+                "TestAgg"
+            ]
+        },
+        {
             "name": "TestCluster",
             "configurations": [
                 "TestSDS",
@@ -382,3 +399,4 @@
         }
     ]
 }
+
