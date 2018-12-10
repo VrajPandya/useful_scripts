@@ -171,13 +171,14 @@
             "program": "${workspaceRoot}/build/bin/mapd_server",
             "args": [
                 "Tests/tmp",
-                "--port 9091",
+                "--port",
+                "9091",
                 "--http-port",
                 "9090",
                 "--calcite-port",
                 "9093",
                 "--cluster",
-                "unittest_cluster_data/cluster.js"
+                "${workspaceRoot}/build/unittest_cluster_data/cluster.js"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
@@ -278,6 +279,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/build/bin/mapd_server",
             "args": [
+                "unittest_cluster_data/leaf2",
                 "--port",
                 "9291",
                 "--http-port",
