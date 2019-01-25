@@ -1,6 +1,6 @@
-port = 9091
-http-port = 9090
-calcite-port = 9093
+port = 6274
+http-port = 6275
+calcite-port = 6279
 data = "dataagg"
 read-only = false
 verbose = false
@@ -10,6 +10,6 @@ filter-push-down-low-frac=-1.0
 enable-debug-timer = false
  
 [web]
-port = 9092
+port = 6273
 frontend = "frontend"
 
