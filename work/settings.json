@@ -3,6 +3,8 @@
     "workbench.editor.enablePreview": false,
     "editor.fontSize": 13,
     "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
     "terminal.integrated.shellArgs.linux": [
         "-l"
     ],
