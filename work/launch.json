@@ -2,18 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "mapd_server",
+            "name": "omnisci_server",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "program": "${workspaceRoot}/build/bin/omnisci_server",
             "args": [
                 "--config",
-                "mapd.conf"
+                "omni.conf"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -24,15 +24,15 @@
             ]
         },
         {
-            "name": "_mapd_server",
+            "name": "_omnisci_server",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/_build/bin/mapd_server",
+            "program": "${workspaceRoot}/_build/bin/omnisci_server",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/_build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -43,10 +43,10 @@
             ]
         },
         {
-            "name": "mapdql",
+            "name": "omniql",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/bin/mapdql",
+            "program": "${workspaceRoot}/build/bin/omniql",
             "args": [
                 "-pHyperInteractive",
                 "--port",
@@ -58,7 +58,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -69,18 +69,18 @@
             ]
         },
         {
-            "name": "mapd_server_agg",
+            "name": "omnisci_server_agg",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "program": "${workspaceRoot}/build/bin/omnisci_server",
             "args": [
                 "--config",
-                "${workspaceRoot}/build/mapd.conf.agg"
+                "${workspaceRoot}/build/omni.conf.agg"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -99,18 +99,18 @@
             "port": 5005
         },
         {
-            "name": "mapd_server_1",
+            "name": "omnisci_server_1",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "program": "${workspaceRoot}/build/bin/omnisci_server",
             "args": [
                 "--config",
-                "${workspaceRoot}/build/mapd.conf.1"
+                "${workspaceRoot}/build/omni.conf.1"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -121,18 +121,18 @@
             ]
         },
         {
-            "name": "mapd_server_2",
+            "name": "omnisci_server_2",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "program": "${workspaceRoot}/build/bin/omnisci_server",
             "args": [
                 "--config",
-                "${workspaceRoot}/build/mapd.conf.2"
+                "${workspaceRoot}/build/omni.conf.2"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -154,7 +154,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -168,7 +168,7 @@
             "name": "TestAgg",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "program": "${workspaceRoot}/build/bin/omnisci_server",
             "args": [
                 "Tests/tmp",
                 "--port",
@@ -183,7 +183,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -210,7 +210,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/Tests",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -234,7 +234,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -248,9 +248,10 @@
             "name": "test_leaf_1",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "program": "${workspaceRoot}/build/bin/omnisci_server",
             "args": [
                 "unittest_cluster_data/leaf1",
+                "--null-div-by-zero=true",
                 "--port",
                 "9191",
                 "--http-port",
@@ -258,12 +259,12 @@
                 "--calcite-port",
                 "9192",
                 "--string-servers",
-                "unittest_cluster_data/cluster.js"
+                "unittest_cluster_data/cluster.js",
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -277,9 +278,10 @@
             "name": "test_leaf_2",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/bin/mapd_server",
+            "program": "${workspaceRoot}/build/bin/omnisci_server",
             "args": [
                 "unittest_cluster_data/leaf2",
+                "--null-div-by-zero=true",
                 "--port",
                 "9291",
                 "--http-port",
@@ -287,12 +289,12 @@
                 "--calcite-port",
                 "9292",
                 "--string-servers",
-                "unittest_cluster_data/cluster.js"
+                "unittest_cluster_data/cluster.js",
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -319,7 +321,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/Tests",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -341,7 +343,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -360,7 +362,51 @@
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/Tests",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "omnisci_ha_1",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/bin/omnisci_server",
+            "args": [
+                "--config",
+                "ha_omni1.conf"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build/",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "omnisci_ha_2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/bin/omnisci_server",
+            "args": [
+                "--config",
+                "ha_omni2.conf"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build/",
+            "environment": [],
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -375,10 +421,10 @@
         {
             "name": "Cluster",
             "configurations": [
-                "mapd_server_1",
-                "mapd_server_2",
+                "omnisci_server_1",
+                "omnisci_server_2",
                 "StringDictionaryServer",
-                "mapd_server_agg"
+                "omnisci_server_agg"
             ]
         },
         {
@@ -397,6 +443,13 @@
                 "test_leaf_1",
                 "test_leaf_2",
                 "DistributedAutoTests"
+            ]
+        },
+        {
+            "name": "HA",
+            "configurations": [
+                "omnisci_ha_1",
+                "omnisci_ha_2"
             ]
         }
     ]
