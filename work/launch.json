@@ -149,7 +149,7 @@
             "program": "${workspaceRoot}/build/bin/StringDictionaryServer",
             "args": [
                 "--config",
-                "${workspaceRoot}/build/mapd-sds.conf"
+                "${workspaceRoot}/build/omni-sds.conf"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/build/",
